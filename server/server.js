@@ -10,10 +10,13 @@ import userRouter from "./routes/userRoutes.js";
 const app = express();
 const port = process.env.PORT || 4000
 
-const host = 'https://sing-s8dh.onrender.com'
+const host = 'https://sing-l8mg.onrender.com/'
 connectDB();
 
-const allowedOrigins = ['https://client-64if.onrender.com']
+const allowedOrigins = ['https://client-ad7d.onrender.com/']
+
+
+
 
 app.use(express.json());
 app.use(cookieParser());
