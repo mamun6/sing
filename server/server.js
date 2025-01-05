@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || https://sing-s8dh.onrender.com
 connectDB();
 
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = ['https://client-64if.onrender.com']
 
 app.use(express.json());
 app.use(cookieParser());
