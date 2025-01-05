@@ -8,7 +8,9 @@ import authRouter from "./routes/authRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 
 const app = express();
-const port = process.env.PORT || https://sing-s8dh.onrender.com
+const port = process.env.PORT || 4000
+
+const host = 'https://sing-s8dh.onrender.com'
 connectDB();
 
 const allowedOrigins = ['https://client-64if.onrender.com']
@@ -23,7 +25,13 @@ app.get('/', (req,res)=>res.send("API Working"));
 app.use('/api/auth', authRouter)
 app.use('/api/user', userRouter)
 
-app.listen(port, ()=> console.log(`Server started on PORT:${port}`));
 
 
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+  // Optionally redirect to the host URL
+  app.get('/', (req, res) => {
+    res.redirect(host);
+  });
+});
 
